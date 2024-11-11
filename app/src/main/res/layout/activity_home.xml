@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:backgroundTint="@color/mine"
+    android:background="#f9f9f9">
+
+    <TextView
+        android:id="@+id/totalMenuItemsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:text="Total Menu Items: 0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/averagePricesTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/averagePricesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="72dp"
+        android:text="Average Prices by Course"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/addMenuItemButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalMenuItemsTextView" />
+
+    <Button
+        android:id="@+id/addMenuItemButton"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Add Menu Item"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/showMenuButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/averagePricesTextView" />
+
+
+    <Button
+        android:id="@+id/filterMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="Filter Menu"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showMenuButton"
+        app:layout_constraintVertical_bias="0.825" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="151dp"
+        android:layout_height="143dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toTopOf="@+id/totalMenuItemsTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72"
+        app:srcCompat="@drawable/chef" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/filterMenuButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addMenuItemButton"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
